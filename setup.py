@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
 
+from stream import __version__
+
 requirements = [
     'cached-property',
     'logical-func>=1.2',
@@ -45,7 +47,7 @@ extra_ci = [
 setup(
     name='python-stream',
 
-    version='dev',
+    version=__version__,
 
     python_requires='>=3.6',
 

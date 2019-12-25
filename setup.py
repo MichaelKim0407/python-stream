@@ -1,14 +1,11 @@
 from setuptools import setup, find_packages
 
 requirements = [
-    'returns-decorator',
-    'gimme-cached-property',
+    'cached-property',
     'logical-func>=1.2',
+    'returns-decorator',
 ]
 
-extra_cached_property = [
-    'cached-property',
-]
 extra_http = [
     'requests',
 ]
@@ -20,12 +17,10 @@ extra_sql = [
     'sqlalchemy',
 ]
 extra_bin = [
-    *extra_cached_property,
     *extra_http,
     *extra_s3,
 ]
 extra_all = [
-    *extra_cached_property,
     *extra_http,
     *extra_s3,
     *extra_sql,
@@ -36,7 +31,6 @@ extra_test = [
     'pytest-runner>=4',
     'pytest-cov>=2',
     *extra_sql,
-    *extra_cached_property,
 ]
 extra_dev = [
     *extra_all,
@@ -58,7 +52,6 @@ setup(
     install_requires=requirements,
 
     extras_require={
-        'cached-property': extra_cached_property,
         's3': extra_s3,
         'http': extra_http,
         'sqlalchemy': extra_sql,

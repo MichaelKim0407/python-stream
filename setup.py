@@ -1,5 +1,11 @@
 from setuptools import setup, find_packages
 
+requirements = [
+    'returns-decorator',
+    'gimme-cached-property',
+    'logical-func>=1.2',
+]
+
 extra_cached_property = [
     'cached-property',
 ]
@@ -49,11 +55,7 @@ setup(
 
     python_requires='>=3.6',
 
-    install_requires=[
-        'returns-decorator',
-        'gimme-cached-property',
-        'logical-func>=1.2',
-    ],
+    install_requires=requirements,
 
     extras_require={
         'cached-property': extra_cached_property,
@@ -72,8 +74,8 @@ setup(
 
     packages=find_packages(),
 
-    url='https://github.com/SelfHacked/python-stream',
-    author='SelfHacked',
+    url='https://github.com/MichaelKim0407/python-stream',
+    author='Michael Kim',
 
     entry_points={
         'console_scripts': [
